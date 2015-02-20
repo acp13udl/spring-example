@@ -2,6 +2,7 @@ package com.udl.softarch.springexample.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/greeting")
 public class GreetingController {
 
-    //@RequestMapping(value = "/greeting")
+    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView viewGreeting() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("greeting");
