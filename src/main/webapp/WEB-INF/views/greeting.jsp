@@ -7,6 +7,6 @@
     </head>
     <body>
         <h3>Greeting:</h3>
-        <p>Hello, ${name}</p>
+        <p>Hello, ${name}!</p>
     </body>
 </html>
