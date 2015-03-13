@@ -7,6 +7,7 @@
     </head>
     <body>
         <h3>Greeting:</h3>
-        <p>Hello, ${name}!</p>
+        <p>${greeting.getContent()}</p>
+        <a href="/greetings">Return to list</a>
     </body>
 </html>

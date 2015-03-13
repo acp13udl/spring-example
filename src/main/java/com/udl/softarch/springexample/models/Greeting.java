@@ -8,12 +8,11 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 
 /**
- * Created by david on 23/02/15.
+ * Created by davidkaste on 23/02/15.
  */
 
 @Entity
 public class Greeting {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
@@ -25,16 +24,14 @@ public class Greeting {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date date;
 
-    public Greeting() {
-
-    }
+    public Greeting() {}
 
     public Greeting(String content, Date date) {
         this.content = content;
         this.date = date;
     }
 
-    public int getId() {
+    public Long getId() {
         return Id;
     }
 
