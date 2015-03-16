@@ -7,7 +7,7 @@
     </head>
     <body>
         <h3>Greeting:</h3>
-        <p>${greeting.getContent()}</p>
+        <p>${fn:escapeXml(greeting.getContent())}</p>
         <a href="/greetings">Return to list</a>
     </body>
 </html>
