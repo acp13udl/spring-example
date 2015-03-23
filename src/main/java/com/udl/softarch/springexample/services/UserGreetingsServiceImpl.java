@@ -60,7 +60,7 @@ public class UserGreetingsServiceImpl implements UserGreetingsService {
         User u = userRepository.findUserByEmail(g.getEmail());
         if(u != null) {
             u.removeGreeting(g);
-            userRepository.save(u):
+            userRepository.save(u);
         }
         greetingRepository.delete(g);
     }
