@@ -19,6 +19,7 @@ public class UserGreetingsServiceImpl implements UserGreetingsService {
     @Autowired
     UserRepository userRepository;
 
+
     @Transactional(readOnly = true)
     @Override
     public User getUserAndGreetings(Long userId) {
@@ -28,7 +29,7 @@ public class UserGreetingsServiceImpl implements UserGreetingsService {
 
     @Transactional
     @Override
-    public Greeting addGreetingToUser(Greeting greeting){
+    public Greeting addGreetingToUser(Greeting greeting) {
         User u = userRepository.findUserByEmail(greeting.getEmail());
         if (u == null) {
             String email = greeting.getEmail();

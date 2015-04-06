@@ -25,6 +25,10 @@
                 <td><form:input path="content"/> <i><form:errors path="content"></form:errors></i></td>
             </tr>
             <tr>
+                <td><form:label path="email">Email</form:label></td>
+                <td><form:input path="email"/><i><form:errors path="email"></form:errors></i></td>
+            </tr>
+            <tr>
                 <td><form:hidden path="date"/> <i><form:errors path="date"></form:errors></i></td>
             </tr>
             <tr>

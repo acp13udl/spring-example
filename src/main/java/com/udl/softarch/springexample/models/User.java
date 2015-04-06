@@ -2,7 +2,6 @@ package com.udl.softarch.springexample.models;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class User {
     @Email(message = "Email shoud be valid")
     private String email;
 
-    @OneToMany(fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true)
     private List<Greeting> greetings = new ArrayList<Greeting>();
 
     public User() {}
@@ -65,4 +64,6 @@ public class User {
     public void removeGreeting(Greeting greeting) {
         greetings.remove(greeting);
     }
+
+
 }
